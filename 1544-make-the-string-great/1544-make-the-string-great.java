@@ -1,17 +1,17 @@
 class Solution {
     public String makeGood(String s) {
         
-        StringBuilder result = new StringBuilder();
+        //using recursion
         
-        for (char ch : s.toCharArray()) {
-            if (result.length() > 0 && (ch + 32 == result.charAt(result.length() - 1) || ch - 32 == result.charAt(result.length() - 1))) {
-                result.deleteCharAt(result.length() - 1);
-            } else {
-                result.append(ch);
+        for(int i =0; i< s.length()-1;i++){
+            
+            if(s.charAt(i) + 32 == s.charAt(i+1) || s.charAt(i) == s.charAt(i+1)+ 32) {
+                
+                return makeGood( s.substring(0,i) + s.substring(i+2));
             }
+            
         }
-        
-        return result.toString();
+        return s;
         
     }
 }
