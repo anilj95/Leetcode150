@@ -1,5 +1,9 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
+       
+       //for this question we will sort the string array : strs = ["flower","flow","flight"]
+    // after sorting it will become : strs = ["flight","flow","flower"] ; i<o so, flight comes 1st.
+    // no we will check only 1st and last strings of Array, as middle one will be already sorted.
 
         Arrays.sort(strs);//  gives sorted Strings inside String array
         
