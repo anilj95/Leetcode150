@@ -17,7 +17,7 @@ class Solution {
                 n= n/10; // gives last char
             }
             
-            if( sum ==1) return true;
+            if( sum ==1) return true; // condition for ano. being happy
             
             n = sum ; // again assiging to num, for calculating power of both no.s
             
