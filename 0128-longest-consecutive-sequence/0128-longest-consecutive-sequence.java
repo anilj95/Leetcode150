@@ -3,7 +3,7 @@ class Solution {
         
         //use hashmap for saving all no.s and markingas false initialy, if visited maras true.
         // we will iterate over nums array, inside 2 while loops one for next elemnts and other for previous element
-        // and keep pdating current length for every element and assign to longest length ; at last return it.
+        // and keep updating current length for every element and assign to longest length ; at last return it.
         
         HashMap<Integer,Boolean> hm = new HashMap<>();
         
