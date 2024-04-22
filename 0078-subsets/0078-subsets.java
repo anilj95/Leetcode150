@@ -27,6 +27,9 @@ class Solution {
 //         return res;
         
         //Method 2: Recursive way
+        //TC: O(n* 2^n) : SC = we are using same Arraylist(curr) for adding & removing O(n), We are generating
+        // 2^3 subsets and adding inside 'res' so 2^n; Recursion used stack , for n elements , O(n)
+        //Total SC: O(n) + O(2^n) + O(n).
         
         List<List<Integer>> res = new ArrayList();
         
@@ -35,11 +38,11 @@ class Solution {
         return res;
     }
     
-    void generateSubset(int index, int[] nums, List<Integer> curr , List<List<Integer>> res){
+    void generateSubset(int index, int[] nums, List<Integer> curr , List<List<Integer>> res){ // O(2^n)
         
         res.add(new ArrayList(curr));// added empty set: at first-> []
         
-        for(int i = index; i<nums.length;i++){
+        for(int i = index; i<nums.length;i++){ //TC: O(n)
             
             curr.add(nums[i]); // added [1] : []->[1] for i = 1;
             
