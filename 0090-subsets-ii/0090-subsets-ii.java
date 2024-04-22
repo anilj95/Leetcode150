@@ -1,7 +1,7 @@
 class Solution {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         
-        Arrays.sort(nums);
+        Arrays.sort(nums); // sorting because: [1,2,2] below code works but for [2,1,2] it will fail so sorted.
         List<List<Integer>> res = new ArrayList();
          getsubsets(0,nums, new ArrayList(), res);
         
