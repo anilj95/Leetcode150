@@ -1,8 +1,8 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
 
-        // usinng two pointer approach, same as finding two sum in soterd array.
-        // only one change, if target is not present return left pointer, also serch upto left<=right.
+        // using two pointer approach, same as finding two sum in sorted array.
+        // only one change, if target is not present return left pointer, also search upto left<=right.
         
         int left = 0;
         int right = nums.length-1;
